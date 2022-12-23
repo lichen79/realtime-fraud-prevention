@@ -403,7 +403,7 @@ Resources:
           InputKafkaTopic:
             Ref: KafkaInputTopic
           mskClusterArn: !Ref MSKCluster
-      Runtime: python3.6
+      Runtime: python3.7
       Timeout: 300
       VpcConfig:
         SecurityGroupIds:
@@ -432,7 +432,7 @@ Resources:
       Environment:
         Variables:
           SNSTopicArn: !Ref fdSNSTopic
-      Runtime: python3.6
+      Runtime: python3.7
       Timeout: 300
 
 #SNS Topic
@@ -806,7 +806,7 @@ Resources:
             Ref: S3connectorPath
           mskconnectRole: !GetAtt MSKConnectServiceRole.Arn
           logGroupName: !Sub "${AWS::StackName}-mskconnect"
-      Runtime: python3.6
+      Runtime: python3.7
       Timeout: 300
 
   MSKKDAConfig:
